@@ -8,7 +8,7 @@ int cn;
 struct Quads {
 	int x1, y1, z1, x2, y2, z2, x3, y3, z3, x4, y4, z4;
 	float r, g, b;
-	//Stores quad quad location: x1,y1,z1 or x2,y2,z2 or x3,y3,z3
+	//Stores quad quad location: x1,y1,z1 or x2,y2,z2 or x3,y3,z3 test
 	int state;
 	//keep track of total number of quads to draw.
 	int total;
