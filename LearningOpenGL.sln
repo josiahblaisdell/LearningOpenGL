@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LearningOpenGL", "LearningOpenGL\LearningOpenGL.vcxproj", "{3EFD5C54-4BC3-4842-892E-F9A4B12E4AB8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RedBookChap1", "RedBookChap1\RedBookChap1.vcxproj", "{130D9D53-75D7-4DBE-9D05-098623993D92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{3EFD5C54-4BC3-4842-892E-F9A4B12E4AB8}.Release|x64.Build.0 = Release|x64
 		{3EFD5C54-4BC3-4842-892E-F9A4B12E4AB8}.Release|x86.ActiveCfg = Release|Win32
 		{3EFD5C54-4BC3-4842-892E-F9A4B12E4AB8}.Release|x86.Build.0 = Release|Win32
+		{130D9D53-75D7-4DBE-9D05-098623993D92}.Debug|x64.ActiveCfg = Debug|x64
+		{130D9D53-75D7-4DBE-9D05-098623993D92}.Debug|x64.Build.0 = Debug|x64
+		{130D9D53-75D7-4DBE-9D05-098623993D92}.Debug|x86.ActiveCfg = Debug|Win32
+		{130D9D53-75D7-4DBE-9D05-098623993D92}.Debug|x86.Build.0 = Debug|Win32
+		{130D9D53-75D7-4DBE-9D05-098623993D92}.Release|x64.ActiveCfg = Release|x64
+		{130D9D53-75D7-4DBE-9D05-098623993D92}.Release|x64.Build.0 = Release|x64
+		{130D9D53-75D7-4DBE-9D05-098623993D92}.Release|x86.ActiveCfg = Release|Win32
+		{130D9D53-75D7-4DBE-9D05-098623993D92}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
