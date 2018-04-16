@@ -198,7 +198,7 @@ void reshapeIcosahedron(int w, int h) {
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluOrtho2D(-2.0, 2.0, -2.0, 2.0);
-	gluPerspective(50.0, 0.8, 1.0, 5.0);
+	gluPerspective(50.0, 1, 1.0, 5.0);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	gluLookAt(0.0, 1.0, 2.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);

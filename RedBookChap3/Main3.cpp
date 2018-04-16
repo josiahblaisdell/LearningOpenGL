@@ -1,12 +1,7 @@
-#include <GL\glut.h>
-#include <iostream>
-#include <string>
-#include "Examples3.h"
-
+#pragma once
+#include "includes.h"
+#include "utilities.h"
 void init();
-void display();
-void keyboard(unsigned char key,int x,int y);
-
 int main(int count, char** arguments) {
 	glutInit(&count, arguments);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
