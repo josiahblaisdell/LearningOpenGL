@@ -8,4 +8,5 @@
 #include "Main.h"
 #include "Plane.h"
 #include "Viewports.h"
+#include "ClippingPlanes.h"
 #include "utilities.h"

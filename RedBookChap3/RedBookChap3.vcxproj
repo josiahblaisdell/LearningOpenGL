@@ -119,6 +119,7 @@
     <ClCompile Include="Main3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ClippingPlanes.h" />
     <ClInclude Include="Cube.h" />
     <ClInclude Include="includes.h" />
     <ClInclude Include="Main.h" />

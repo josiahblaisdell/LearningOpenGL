@@ -125,6 +125,15 @@ void keyboard(unsigned char key, int x, int y) {
 		gluPerspective(60, w / (2 * h), 1.5, 20);
 		glViewport(w/2, 0, w / 2, h);
 		break;
+	case '5':
+		glClear(GL_COLOR_BUFFER_BIT);
+		glutDisplayFunc(displayClippingPlanes);
+		glutReshapeFunc(reshapeClippingPlanes);
+		glutSetWindowTitle("Try this: Clipping Planes");
+		reshapeClippingPlanes(w, h);
+		dx = 0, dy = 0, dz = 0;
+		pitch = 0, roll = 0, yaw = 0;
+		break;
 	case 'w':
 		dz += 1;
 		break;
