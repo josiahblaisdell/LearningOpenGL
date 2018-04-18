@@ -9,6 +9,8 @@ void displayPlane();
 void reshapePlane(int, int);
 void displayViewports();
 void reshapeViewports(int, int);
+void displayClippingPlanes();
+void reshapeClippingPlanes(int, int);
 
 //retrieved from http://programmingexamples.net/wiki/OpenGL/Text
 //4/8/2018
@@ -118,7 +120,6 @@ void keyboard(unsigned char key, int x, int y) {
 		glutDisplayFunc(displayViewports);
 		glutReshapeFunc(reshapeViewports);
 		glutSetWindowTitle("Draw Different Viewports");
-		
 		reshapeViewports(w, h);
 		dx = 0, dy = 0, dz = 0;
 		pitch = 0, roll = 0, yaw = 0;
