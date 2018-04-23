@@ -78,62 +78,67 @@ void pitchTranslateD() {
 		pitch = abs(pitch) - 360;
 	}
 }
+bool isMove(unsigned char key) {
+	if (key == 'q' || key == 'z' || key == 'w' ||
+		key == 'a' || key == 's' || key == 'd' ||
+		key == 'i' || key == 'j' || key == 'k' ||
+		key == 'l' || key == 'u' || key == 'o') {
+		return true;
+	}
+	else { return false; }
+}
 void keyboard(unsigned char key, int x, int y) {
 	int w = glutGet(GLUT_WINDOW_WIDTH);
 	int h = glutGet(GLUT_WINDOW_HEIGHT);
+	if (!isMove(key)) {
+		glDisable(GL_CLIP_PLANE0);
+		glDisable(GL_CLIP_PLANE1);
+		glClear(GL_COLOR_BUFFER_BIT);
+		dx = 0, dy = 0, dz = 0;
+		pitch = 0, roll = 0, yaw = 0;
+	}
 	switch (key)
 	{
-	case '1':
-		glClear(GL_COLOR_BUFFER_BIT);
+	case '1':		
 		//Whenever GLUT determines the contents of the window need to be redisplayed,
 		//the callback function registered by glutDisplayFunc() is executed. Therefore, you should put 
 		//all the routines you need to redraw the scene in the display callback function.
 		glutDisplayFunc(display);
 		glutReshapeFunc(reshape);
 		glutSetWindowTitle("Table of Contents");
-		dx = 0, dy = 0, dz = 0;
-		pitch = 0, roll = 0, yaw = 0;
-		glutPostRedisplay();
+		reshape(w, h);
+
 		break;
 	case '2':
-		glClear(GL_COLOR_BUFFER_BIT);
 		glutDisplayFunc(displayCube);
 		glutReshapeFunc(reshapeCube);
 		glutSetWindowTitle("Draw a Cube");
 		reshapeCube(w, h);
-		dx = 0, dy = 0, dz = 0;
-		pitch = 0, roll = 0, yaw = 0;
-		glutPostRedisplay();
 		break;
 	case '3':
-		glClear(GL_COLOR_BUFFER_BIT);
 		glutDisplayFunc(displayPlane);
 		glutReshapeFunc(reshapePlane);
 		glutSetWindowTitle("Draw a Plane: plane view mode");
 		reshapePlane(w, h);
-		dx = 0, dy = 0, dz = 0;
-		pitch = 0, roll = 0, yaw = 0;
-		glutPostRedisplay();
 		break;
 	case '4':
-		glClear(GL_COLOR_BUFFER_BIT);
 		glutDisplayFunc(displayViewports);
 		glutReshapeFunc(reshapeViewports);
 		glutSetWindowTitle("Draw Different Viewports");
 		reshapeViewports(w, h);
-		dx = 0, dy = 0, dz = 0;
-		pitch = 0, roll = 0, yaw = 0;
 		gluPerspective(60, w / (2 * h), 1.5, 20);
 		glViewport(w/2, 0, w / 2, h);
 		break;
 	case '5':
-		glClear(GL_COLOR_BUFFER_BIT);
 		glutDisplayFunc(displayClippingPlanes);
 		glutReshapeFunc(reshapeClippingPlanes);
 		glutSetWindowTitle("Try this: Clipping Planes");
+		glMatrixMode(GL_PROJECTION);
+		glLoadIdentity();
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
 		reshapeClippingPlanes(w, h);
-		dx = 0, dy = 0, dz = 0;
-		pitch = 0, roll = 0, yaw = 0;
+
 		break;
 	case 'w':
 		dz += 1;
