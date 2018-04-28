@@ -124,6 +124,7 @@
     <ClInclude Include="includes.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="Plane.h" />
+    <ClInclude Include="SolarSystem.h" />
     <ClInclude Include="utilities.h" />
     <ClInclude Include="Viewports.h" />
   </ItemGroup>

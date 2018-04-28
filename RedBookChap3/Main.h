@@ -13,6 +13,7 @@ void drawText() {
 	printtext(10, glutGet(GLUT_WINDOW_HEIGHT) - 60, "3: Control a cheesy airplane");
 	printtext(10, glutGet(GLUT_WINDOW_HEIGHT) - 80, "4: Different Viewports");
 	printtext(10, glutGet(GLUT_WINDOW_HEIGHT) - 100, "5: Clipping Planes");
+	printtext(10, glutGet(GLUT_WINDOW_HEIGHT) - 120, "6: Solar System");
 }
 void display(void)
 {

@@ -138,7 +138,16 @@ void keyboard(unsigned char key, int x, int y) {
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
 		reshapeClippingPlanes(w, h);
-
+		break;
+	case '6':
+		//glutDisplayFunc(displaySolarSystem);
+		//glutReshapeFunc(reshapeSolarSystem);
+		glutSetWindowTitle("Try this: Building a Solar System");
+		glMatrixMode(GL_PROJECTION);
+		glLoadIdentity();
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
+		reshapeClippingPlanes(w, h);
 		break;
 	case 'w':
 		dz += 1;

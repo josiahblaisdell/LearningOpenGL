@@ -41,5 +41,8 @@
     <ClInclude Include="ClippingPlanes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SolarSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
