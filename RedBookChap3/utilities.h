@@ -11,12 +11,29 @@ void displayViewports();
 void reshapeViewports(int, int);
 void displayClippingPlanes();
 void reshapeClippingPlanes(int, int);
+void displaySolarSystem();
+void reshapeSolarSystem(int, int);
 
 //retrieved from http://programmingexamples.net/wiki/OpenGL/Text
 //4/8/2018
 int dx = 0, dy = 0, dz = 0;
 float pitch = 0, roll = 0, yaw = 0;
 std::string mode = "planeview";
+static double day = 0, time = 0;
+void incrementTime(double i) {
+	//1440 minutes in a day
+	if (time > 1440) {
+		time -= 1440;
+	}
+	time += i;
+}
+void incrementDay(double i) {
+	//365.25 days in a year.
+	if (day > 365.25) {
+		day -= 365.25;
+	}
+	day += i;
+}
 void printtext(int x, int y, std::string String)
 {
 	//(x,y) is from the bottom left of the window
@@ -185,6 +202,10 @@ void keyboard(unsigned char key, int x, int y) {
 	case 'o':
 		rollTranslateR();
 		break;
+	case ' ':
+		incrementDay();
+		incrementTime();
+
 	default:
 		break;
 	}
